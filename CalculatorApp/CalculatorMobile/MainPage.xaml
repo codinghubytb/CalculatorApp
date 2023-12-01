@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculatorMobile.MainPage">
+
+    <StackLayout>
+            <StackLayout.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="{AppThemeBinding Light={x:StaticResource White}, Dark={x:StaticResource Blue}}"
+                          Offset="0.1" />
+                    <GradientStop Color="{AppThemeBinding Light={x:StaticResource White}, Dark={x:StaticResource DarkBlue}}"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </StackLayout.Background>
+
+
+            <Frame
+            BorderColor="Transparent"
+            BackgroundColor="Transparent"
+                VerticalOptions="FillAndExpand">
+                <StackLayout >
+
+                    <Label Text=""
+                       x:Name="lbl"
+                       MaxLines="1"
+                           VerticalOptions="EndAndExpand"
+                   HorizontalTextAlignment="End"
+                   FontSize="90"/>
+                <Label Text=""
+                       x:Name="result"
+                           VerticalOptions="EndAndExpand"
+                   HorizontalTextAlignment="End"
+                   FontSize="40"/>
+
+            </StackLayout>
+            </Frame>
+            <BoxView HeightRequest="1"
+                 BackgroundColor="{StaticResource Gray100}"
+                     Opacity="0.2"/>
+
+            <Grid
+            VerticalOptions="FillAndExpand"
+            RowDefinitions="*,*,*,*,*"
+            ColumnDefinitions="*,*,*,*"
+            x:Name="grid"
+            Padding="5">
+
+            </Grid>
+        </StackLayout>
+
+</ContentPage>
